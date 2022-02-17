@@ -20,7 +20,7 @@
             android:layout_width="@dimen/_55sdp"
             android:src="@drawable/favorites_icon"
             android:layout_height="@dimen/_55sdp"/>
-        <com.templatemela.sangitguru.musicplayer.HeeboRegular
+        <com.music.musicplayer.mp3player.musicplayer.HeeboRegular
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
@@ -42,7 +42,7 @@
             android:layout_width="@dimen/_55sdp"
             android:src="@drawable/ic_new_playlist"
             android:layout_height="@dimen/_55sdp"/>
-        <com.templatemela.sangitguru.musicplayer.HeeboRegular
+        <com.music.musicplayer.mp3player.musicplayer.HeeboRegular
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"

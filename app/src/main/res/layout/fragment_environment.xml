@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <com.templatemela.sangitguru.musicplayer.HeeboRegular
+    <com.music.musicplayer.mp3player.musicplayer.HeeboRegular
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"

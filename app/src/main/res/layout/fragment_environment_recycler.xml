@@ -14,7 +14,7 @@
         android:paddingTop="@dimen/_8sdp"
         android:paddingBottom="@dimen/_8sdp">
 
-        <com.templatemela.sangitguru.musicplayer.HeeboRegular
+        <com.music.musicplayer.mp3player.musicplayer.HeeboRegular
             android:id="@+id/environmentEffect"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

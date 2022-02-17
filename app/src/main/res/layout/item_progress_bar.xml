@@ -13,7 +13,7 @@
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingBottom="@dimen/padding_top_dialog">
 
-        <com.templatemela.sangitguru.voice_change.view.CircularProgressBar
+        <com.music.musicplayer.mp3player.voice_change.view.CircularProgressBar
             android:id="@+id/progressBar1"
             android:layout_width="@dimen/height_process_bar"
             android:layout_height="@dimen/height_process_bar"

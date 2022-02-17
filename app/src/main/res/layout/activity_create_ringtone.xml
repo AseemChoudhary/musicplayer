@@ -469,7 +469,7 @@
 
 
 
-                                        <com.templatemela.sangitguru.ringtone.helper.SeekbarVC
+                                        <com.music.musicplayer.mp3player.ringtone.helper.SeekbarVC
                                             android:id="@+id/seekrate"
                                             android:layout_width="match_parent"
                                             android:layout_height="wrap_content"
@@ -512,7 +512,7 @@
                                         android:orientation="horizontal"
                                         android:paddingLeft="@dimen/_5sdp">
 
-                                        <com.templatemela.sangitguru.ringtone.helper.SeekbarVC
+                                        <com.music.musicplayer.mp3player.ringtone.helper.SeekbarVC
                                             android:id="@+id/seekpitch"
                                             android:layout_width="match_parent"
                                             android:layout_weight="1"

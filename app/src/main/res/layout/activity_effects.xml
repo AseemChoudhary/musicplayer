@@ -35,7 +35,7 @@
             android:layout_weight="6.5"
             android:gravity="center">
 
-            <com.templatemela.sangitguru.musicplayer.HeeboRegular
+            <com.music.musicplayer.mp3player.musicplayer.HeeboRegular
                 android:id="@+id/tv_header"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

@@ -42,7 +42,7 @@
                 android:orientation="vertical"
                 android:paddingTop="@dimen/_5sdp">
 
-                <com.templatemela.sangitguru.musicplayer.HeeboRegular
+                <com.music.musicplayer.mp3player.musicplayer.HeeboRegular
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"

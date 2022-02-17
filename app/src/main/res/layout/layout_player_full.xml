@@ -20,7 +20,7 @@
         >
 
 
-        <com.templatemela.sangitguru.radio.views.RecyclerAwareNestedScrollView
+        <com.music.musicplayer.mp3player.radio.views.RecyclerAwareNestedScrollView
             android:id="@+id/scrollViewContent"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -252,7 +252,7 @@
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
-        </com.templatemela.sangitguru.radio.views.RecyclerAwareNestedScrollView>
+        </com.music.musicplayer.mp3player.radio.views.RecyclerAwareNestedScrollView>
 
         <ImageButton
             android:id="@+id/buttonRecord"

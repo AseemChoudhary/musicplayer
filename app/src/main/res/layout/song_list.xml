@@ -26,7 +26,7 @@
             android:layout_marginLeft="@dimen/_13sdp"
             android:src="@drawable/playsmallnew" />
 
-        <com.templatemela.sangitguru.musicplayer.HeeboRegular
+        <com.music.musicplayer.mp3player.musicplayer.HeeboRegular
             android:id="@+id/song_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

@@ -25,7 +25,7 @@
             app:iiv_padding="2dp"
             app:iiv_size="20dp"/>
 
-        <com.templatemela.sangitguru.radio.views.TagsView
+        <com.music.musicplayer.mp3player.radio.views.TagsView
             android:id="@+id/viewTags"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

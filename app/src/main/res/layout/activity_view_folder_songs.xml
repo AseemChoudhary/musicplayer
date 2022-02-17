@@ -41,7 +41,7 @@
                 android:paddingTop="@dimen/_5sdp"
                 android:orientation="vertical">
 
-                <com.templatemela.sangitguru.musicplayer.HeeboRegular
+                <com.music.musicplayer.mp3player.musicplayer.HeeboRegular
                     android:id="@+id/folderName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -53,7 +53,7 @@
                     android:textColor="@color/white"
                     android:textSize="@dimen/_14sdp" />
 
-                <com.templatemela.sangitguru.musicplayer.HeeboRegular
+                <com.music.musicplayer.mp3player.musicplayer.HeeboRegular
                     android:id="@+id/totalFolderSongs"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

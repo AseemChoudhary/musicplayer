@@ -142,7 +142,7 @@
 
             android:padding="7dp">
 
-            <com.templatemela.sangitguru.musicplayer.HeeboRegular
+            <com.music.musicplayer.mp3player.musicplayer.HeeboRegular
                 android:id="@+id/currTime"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -164,7 +164,7 @@
                 android:progressTint="@color/app_color"
                 android:thumb="@drawable/thumb" />
 
-            <com.templatemela.sangitguru.musicplayer.HeeboRegular
+            <com.music.musicplayer.mp3player.musicplayer.HeeboRegular
                 android:id="@+id/totalTime"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -184,7 +184,7 @@
             android:orientation="vertical"
             android:visibility="visible">
 
-            <com.templatemela.sangitguru.musicplayer.HeeboRegular
+            <com.music.musicplayer.mp3player.musicplayer.HeeboRegular
                 android:id="@+id/txt1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -197,7 +197,7 @@
                 android:textColor="#fff"
                 android:textSize="@dimen/_18sdp" />
 
-            <com.templatemela.sangitguru.musicplayer.HeeboRegular
+            <com.music.musicplayer.mp3player.musicplayer.HeeboRegular
                 android:id="@+id/txt2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -224,7 +224,7 @@
                 android:layout_weight="1.2"
                 android:gravity="center">
 
-                <com.templatemela.sangitguru.musicplayer.HeeboRegular
+                <com.music.musicplayer.mp3player.musicplayer.HeeboRegular
                     android:id="@+id/txtTimer"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.templatemela.sangitguru">
+    package="com.music.musicplayer.mp3player">
 
     <uses-sdk tools:overrideLibrary="androidx.tvprovider" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE" />
     <uses-permission android:name="android.perm8ission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission
@@ -33,7 +32,7 @@
     <uses-permission android:name="com.android.providers.tv.permission.WRITE_EPG_DATA" />
 
     <application
-        android:name="com.templatemela.sangitguru.radio.MainRadioHelper"
+        android:name="com.music.musicplayer.mp3player.radio.MainRadioHelper"
         android:allowBackup="true"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:label="@string/app_name"
@@ -45,11 +44,11 @@
         android:theme="@style/Theme.MusicPlayerApp"
         android:usesCleartextTraffic="true">
         <activity
-            android:name="com.templatemela.sangitguru.MainCreationActivity"
+            android:name="com.music.musicplayer.mp3player.MainCreationActivity"
             android:theme="@style/Theme.MusicPlayerApp"
             android:exported="true" />
         <activity
-            android:name="com.templatemela.sangitguru.Splash"
+            android:name="com.music.musicplayer.mp3player.Splash"
             android:exported="true"
             android:screenOrientation="portrait"
              android:theme="@style/Theme.MusicPlayerApp">
@@ -64,7 +63,7 @@
             android:value="@string/admob_app_id" />
         <provider
             android:name="androidx.core.content.FileProvider"
-            android:authorities="com.templatemela.sangitguru.fileprovider"
+            android:authorities="com.music.musicplayer.mp3player.fileprovider"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data
@@ -73,7 +72,7 @@
         </provider>
 
         <activity
-            android:name="com.templatemela.sangitguru.radio.ActivityMain"
+            android:name="com.music.musicplayer.mp3player.radio.ActivityMain"
             android:exported="true"
             android:label="@string/app_name"
              android:theme="@style/Theme.MusicPlayerApp"
@@ -84,7 +83,7 @@
         </activity>
 
         <service
-            android:name="com.templatemela.sangitguru.radio.service.PlayerService"
+            android:name="com.music.musicplayer.mp3player.radio.service.PlayerService"
             android:exported="true"
             android:permission="android.permission.BIND_JOB_SERVICE">
             <intent-filter>
@@ -93,7 +92,7 @@
         </service>
 
         <receiver
-            android:name="com.templatemela.sangitguru.radio.alarm.AlarmReceiver"
+            android:name="com.music.musicplayer.mp3player.radio.alarm.AlarmReceiver"
             android:enabled="true"
             android:exported="true">
             <intent-filter>
@@ -108,7 +107,7 @@
             </intent-filter>
         </receiver>
         <receiver
-            android:name="com.templatemela.sangitguru.radio.BootReceiver"
+            android:name="com.music.musicplayer.mp3player.radio.BootReceiver"
             android:enabled="true"
             android:exported="true">
             <intent-filter>
@@ -117,46 +116,46 @@
         </receiver>
 
         <activity
-            android:name="com.templatemela.sangitguru.musicplayer.HomeActivity"
+            android:name="com.music.musicplayer.mp3player.musicplayer.HomeActivity"
             android:screenOrientation="portrait"
              android:theme="@style/Theme.MusicPlayerApp" />
         <activity
-            android:name="com.templatemela.sangitguru.musicplayer.ViewAlbumSongsActivity"
+            android:name="com.music.musicplayer.mp3player.musicplayer.ViewAlbumSongsActivity"
             android:screenOrientation="portrait"
              android:theme="@style/Theme.MusicPlayerApp" />
         <activity
-            android:name="com.templatemela.sangitguru.musicplayer.PlayerActivity"
+            android:name="com.music.musicplayer.mp3player.musicplayer.PlayerActivity"
             android:screenOrientation="portrait"
              android:theme="@style/Theme.MusicPlayerApp"
             />
         <activity
-            android:name="com.templatemela.sangitguru.musicplayer.ViewArtistSongsActivity"
+            android:name="com.music.musicplayer.mp3player.musicplayer.ViewArtistSongsActivity"
             android:screenOrientation="portrait"
              android:theme="@style/Theme.MusicPlayerApp" />
         <activity
-            android:name="com.templatemela.sangitguru.musicplayer.ViewFolderSongsActivity"
+            android:name="com.music.musicplayer.mp3player.musicplayer.ViewFolderSongsActivity"
             android:screenOrientation="portrait"
              android:theme="@style/Theme.MusicPlayerApp" />
 
         <service
-            android:name="com.templatemela.sangitguru.musicplayer.PlayerService"
+            android:name="com.music.musicplayer.mp3player.musicplayer.PlayerService"
             android:enabled="true" />
 
         <activity
-            android:name="com.templatemela.sangitguru.musicplayer.SearchActivity"
+            android:name="com.music.musicplayer.mp3player.musicplayer.SearchActivity"
             android:screenOrientation="portrait"
              android:theme="@style/Theme.MusicPlayerApp" />
         <activity
-            android:name="com.templatemela.sangitguru.musicplayer.NewPlaylistActivity"
+            android:name="com.music.musicplayer.mp3player.musicplayer.NewPlaylistActivity"
             android:screenOrientation="portrait"
              android:theme="@style/Theme.MusicPlayerApp" />
         <activity
-            android:name="com.templatemela.sangitguru.musicplayer.ViewPLaylistSongsActivity"
+            android:name="com.music.musicplayer.mp3player.musicplayer.ViewPLaylistSongsActivity"
             android:screenOrientation="portrait"
              android:theme="@style/Theme.MusicPlayerApp" />
 
         <receiver
-            android:name="com.templatemela.sangitguru.musicplayer.CommonReceiver"
+            android:name="com.music.musicplayer.mp3player.musicplayer.CommonReceiver"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
@@ -165,69 +164,69 @@
         </receiver>
 
         <activity
-            android:name="com.templatemela.sangitguru.musicplayer.TimerActivity"
+            android:name="com.music.musicplayer.mp3player.musicplayer.TimerActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.MusicPlayerApp" />
         <activity
-            android:name="com.templatemela.sangitguru.musicplayer.FavouriteActivity"
+            android:name="com.music.musicplayer.mp3player.musicplayer.FavouriteActivity"
             android:screenOrientation="portrait"
              android:theme="@style/Theme.MusicPlayerApp" />
 
 
         <activity
-            android:name="com.templatemela.sangitguru.MainActivity"
+            android:name="com.music.musicplayer.mp3player.MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.MusicPlayerApp">
 
         </activity>
         <activity
-            android:name="com.templatemela.sangitguru.voice_change.RecordActivity"
+            android:name="com.music.musicplayer.mp3player.voice_change.RecordActivity"
             android:screenOrientation="portrait"
              android:theme="@style/Theme.MusicPlayerApp" />
         <activity
-            android:name="com.templatemela.sangitguru.voice_change.EffectActivity"
+            android:name="com.music.musicplayer.mp3player.voice_change.EffectActivity"
             android:screenOrientation="portrait"
              android:theme="@style/Theme.MusicPlayerApp" />
 
         <activity
-            android:name="com.templatemela.sangitguru.ringtone.PrePostActivity"
+            android:name="com.music.musicplayer.mp3player.ringtone.PrePostActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.MusicPlayerApp" />
         <activity
-            android:name="com.templatemela.sangitguru.ringtone.CreateRingtoneActivity"
+            android:name="com.music.musicplayer.mp3player.ringtone.CreateRingtoneActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.MusicPlayerApp" />
         <activity
-            android:name="com.templatemela.sangitguru.ringtone.PlayToneActivity"
+            android:name="com.music.musicplayer.mp3player.ringtone.PlayToneActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.MusicPlayerApp" />
         <activity
-            android:name="com.templatemela.sangitguru.ringtone.Music_Edit_Activity"
+            android:name="com.music.musicplayer.mp3player.ringtone.Music_Edit_Activity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.MusicPlayerApp" />
         <activity
-            android:name="com.templatemela.sangitguru.ringtone.SelectRingtoneActivity"
+            android:name="com.music.musicplayer.mp3player.ringtone.SelectRingtoneActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.MusicPlayerApp" />
         <activity
-            android:name="com.templatemela.sangitguru.ringtone.SongEditActivity"
+            android:name="com.music.musicplayer.mp3player.ringtone.SongEditActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.MusicPlayerApp" />
         <activity
-            android:name="com.templatemela.sangitguru.ringtone.PlayRingtoneActivity"
+            android:name="com.music.musicplayer.mp3player.ringtone.PlayRingtoneActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.MusicPlayerApp" />
         <activity
-            android:name="com.templatemela.sangitguru.ringtone.ListAllContactActivity"
+            android:name="com.music.musicplayer.mp3player.ringtone.ListAllContactActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.MusicPlayerApp" />
 
         <activity
-            android:name="com.templatemela.sangitguru.ringtone.MyNameRingtoneListActivity"
+            android:name="com.music.musicplayer.mp3player.ringtone.MyNameRingtoneListActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.MusicPlayerApp" />
         <activity
-            android:name="com.templatemela.sangitguru.ringtone.RingToneMainActivity"
+            android:name="com.music.musicplayer.mp3player.ringtone.RingToneMainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.MusicPlayerApp" />
     </application>

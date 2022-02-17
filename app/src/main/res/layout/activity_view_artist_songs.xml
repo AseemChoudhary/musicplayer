@@ -42,7 +42,7 @@
                 android:orientation="vertical"
                 android:paddingTop="@dimen/_5sdp">
 
-                <com.templatemela.sangitguru.musicplayer.HeeboRegular
+                <com.music.musicplayer.mp3player.musicplayer.HeeboRegular
                     android:id="@+id/artistName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -54,7 +54,7 @@
                     android:textColor="@color/white"
                     android:textSize="@dimen/_14sdp" />
 
-                <com.templatemela.sangitguru.musicplayer.HeeboRegular
+                <com.music.musicplayer.mp3player.musicplayer.HeeboRegular
                     android:id="@+id/totalArtistSongs"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

@@ -10,7 +10,7 @@
     android:background="@drawable/round_list_item"
     android:orientation="vertical"
    >
-    <com.templatemela.sangitguru.musicplayer.HeeboRegular
+    <com.music.musicplayer.mp3player.musicplayer.HeeboRegular
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -36,7 +36,7 @@
         android:layout_height="match_parent">
 
 
-        <com.templatemela.sangitguru.musicplayer.HeeboRegular
+        <com.music.musicplayer.mp3player.musicplayer.HeeboRegular
         android:id="@+id/txtSongname"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -45,7 +45,7 @@
         android:textColor="@color/white"
         android:textSize="@dimen/_12sdp" />
 
-    <com.templatemela.sangitguru.musicplayer.HeeboRegular
+    <com.music.musicplayer.mp3player.musicplayer.HeeboRegular
         android:id="@+id/txtArtist"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -54,7 +54,7 @@
         android:textColor="@color/white"
         android:textSize="@dimen/_12sdp" />
 
-    <com.templatemela.sangitguru.musicplayer.HeeboRegular
+    <com.music.musicplayer.mp3player.musicplayer.HeeboRegular
         android:id="@+id/txtLocation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -63,7 +63,7 @@
         android:textColor="@color/white"
         android:textSize="@dimen/_12sdp" />
 
-    <com.templatemela.sangitguru.musicplayer.HeeboRegular
+    <com.music.musicplayer.mp3player.musicplayer.HeeboRegular
         android:id="@+id/txtDuration"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

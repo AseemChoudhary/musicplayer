@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">SangitGuru</string>
+    <string name="app_name">Music Player</string>
     <string name="ok">OK</string>
     <string name="name_ringtone">My Name Ringtone</string>
     <string name="dec_ringtone">Create Your Own Name \n custom Ringtone.</string>

@@ -40,7 +40,7 @@
         android:textColor="@color/white"
         android:textSize="15dp" />
 
-    <com.templatemela.sangitguru.musicplayer.HeeboRegular
+    <com.music.musicplayer.mp3player.musicplayer.HeeboRegular
         android:id="@+id/card_artist"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

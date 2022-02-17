@@ -48,7 +48,7 @@
                     android:gravity="center"
                     android:orientation="vertical">
 
-                    <com.templatemela.sangitguru.musicplayer.HeeboRegular
+                    <com.music.musicplayer.mp3player.musicplayer.HeeboRegular
                         android:id="@+id/txt11"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -61,7 +61,7 @@
                         android:fontFamily="@font/heebo_semibold"
                         android:textSize="@dimen/_12sdp" />
 
-                    <com.templatemela.sangitguru.musicplayer.HeeboRegular
+                    <com.music.musicplayer.mp3player.musicplayer.HeeboRegular
                         android:id="@+id/txt12"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"

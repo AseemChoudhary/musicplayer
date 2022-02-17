@@ -87,19 +87,19 @@
                     android:layout_height="match_parent"
                     android:scaleType="centerCrop" />
 
-                <com.templatemela.sangitguru.ringtone.designview.WaveformView
+                <com.music.musicplayer.mp3player.ringtone.designview.WaveformView
                     android:id="@+id/waveform"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" />
 
-                <com.templatemela.sangitguru.ringtone.designview.MarkerView
+                <com.music.musicplayer.mp3player.ringtone.designview.MarkerView
                     android:id="@+id/startmarker"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:nextFocusDown="@+id/endmarker"
                     android:src="@drawable/slider_left" />
 
-                <com.templatemela.sangitguru.ringtone.designview.MarkerView
+                <com.music.musicplayer.mp3player.ringtone.designview.MarkerView
                     android:id="@+id/endmarker"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

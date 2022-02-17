@@ -25,7 +25,7 @@
             android:layout_marginBottom="10dp"
             android:gravity="center">
 
-            <com.templatemela.sangitguru.musicplayer.HeeboRegular
+            <com.music.musicplayer.mp3player.musicplayer.HeeboRegular
                 android:id="@+id/dialog_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
