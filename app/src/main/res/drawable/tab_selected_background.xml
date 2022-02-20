@@ -7,8 +7,8 @@
         android:startX="42.81"
         android:startY="41.54"
         android:type="linear"
-        android:centerColor="#FFFA586F"
-        android:endColor="#FFF52B7E"
-        android:startColor="#FFFA7868" />
+        android:centerColor="#009e35"
+        android:endColor="#00f992"
+        android:startColor="#00c25b" />
     <corners android:radius="20dp"/>
 </shape>

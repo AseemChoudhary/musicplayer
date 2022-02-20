@@ -286,9 +286,9 @@ public class MainActivity extends AppCompatActivity {
                     progressDialog.dismiss();
                     Intent intent= new Intent(MainActivity.this,HomeActivity.class);
                     startActivity(intent);
-                    finish();
+                  //  finish();
 
-                   AdsUtils.initAd(MainActivity.this);
+                //   AdsUtils.initAd(MainActivity.this);
 //                    AdsUtils.loadRewardedAd(MainActivity.this,new Intent(MainActivity.this, HomeActivity.class));
 //                    AdsUtils.loadInterAd(MainActivity.this);
                  //   AdsUtils.showInterAd(MainActivity.this,new Intent(MainActivity.this, HomeActivity.class));

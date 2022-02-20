@@ -16,6 +16,7 @@ import android.app.Dialog;
 import android.content.ContentValues;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.media.AudioAttributes;
 import android.media.MediaPlayer;
 import android.media.RingtoneManager;
 import android.media.audiofx.BassBoost;
@@ -562,6 +563,12 @@ public class PlayerActivity extends AppCompatActivity implements MediaPlayer.OnC
             }
             if (mMediaPlayer == null) {
                 mMediaPlayer = new MediaPlayer();
+                mMediaPlayer.setAudioAttributes(
+                        new AudioAttributes.Builder()
+                                .setContentType(AudioAttributes.CONTENT_TYPE_MUSIC)
+                                .setUsage(AudioAttributes.USAGE_MEDIA)
+                                .build()
+                );
             }
             try {
                 mMediaPlayer.setDataSource(playerLocalTrack.getPath());
@@ -575,6 +582,12 @@ public class PlayerActivity extends AppCompatActivity implements MediaPlayer.OnC
             }
         } else if (mMediaPlayer == null) {
             mMediaPlayer = new MediaPlayer();
+            mMediaPlayer.setAudioAttributes(
+                    new AudioAttributes.Builder()
+                            .setContentType(AudioAttributes.CONTENT_TYPE_MUSIC)
+                            .setUsage(AudioAttributes.USAGE_MEDIA)
+                            .build()
+            );
             try {
                 mMediaPlayer.setDataSource(playerLocalTrack.getPath());
                 mMediaPlayer.prepareAsync();
@@ -747,6 +760,12 @@ public class PlayerActivity extends AppCompatActivity implements MediaPlayer.OnC
             repeat_controller.setImageResource(R.drawable.repeat_presed1);
             mMediaPlayer.reset();
             mMediaPlayer = new MediaPlayer();
+            mMediaPlayer.setAudioAttributes(
+                    new AudioAttributes.Builder()
+                            .setContentType(AudioAttributes.CONTENT_TYPE_MUSIC)
+                            .setUsage(AudioAttributes.USAGE_MEDIA)
+                            .build()
+            );
             try {
                 mMediaPlayer.setDataSource(playerLocalTrack.getPath());
                 mMediaPlayer.prepare();
@@ -874,6 +893,12 @@ public class PlayerActivity extends AppCompatActivity implements MediaPlayer.OnC
                         mMediaPlayer.stop();
                         mMediaPlayer.reset();
                         mMediaPlayer = new MediaPlayer();
+                        mMediaPlayer.setAudioAttributes(
+                                new AudioAttributes.Builder()
+                                        .setContentType(AudioAttributes.CONTENT_TYPE_MUSIC)
+                                        .setUsage(AudioAttributes.USAGE_MEDIA)
+                                        .build()
+                        );
                         try {
                             mMediaPlayer.setDataSource(playerLocalTrack.getPath());
                             mMediaPlayer.prepareAsync();
@@ -951,6 +976,12 @@ public class PlayerActivity extends AppCompatActivity implements MediaPlayer.OnC
                     mMediaPlayer.stop();
                     mMediaPlayer.reset();
                     mMediaPlayer = new MediaPlayer();
+                    mMediaPlayer.setAudioAttributes(
+                            new AudioAttributes.Builder()
+                                    .setContentType(AudioAttributes.CONTENT_TYPE_MUSIC)
+                                    .setUsage(AudioAttributes.USAGE_MEDIA)
+                                    .build()
+                    );
                     try {
                         mMediaPlayer.setDataSource(playerLocalTrack.getPath());
                         mMediaPlayer.prepareAsync();
@@ -1037,6 +1068,12 @@ public class PlayerActivity extends AppCompatActivity implements MediaPlayer.OnC
                     txt2.setText(playerLocalTrack.getArtist());
                     mMediaPlayer.reset();
                     mMediaPlayer = new MediaPlayer();
+                    mMediaPlayer.setAudioAttributes(
+                            new AudioAttributes.Builder()
+                                    .setContentType(AudioAttributes.CONTENT_TYPE_MUSIC)
+                                    .setUsage(AudioAttributes.USAGE_MEDIA)
+                                    .build()
+                    );
                     try {
                         mMediaPlayer.setDataSource(playerLocalTrack.getPath());
                         mMediaPlayer.prepareAsync();

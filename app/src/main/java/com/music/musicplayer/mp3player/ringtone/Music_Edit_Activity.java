@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
+import android.media.AudioAttributes;
 import android.media.MediaPlayer;
 import android.media.MediaScannerConnection;
 import android.net.Uri;
@@ -31,7 +32,6 @@ import com.music.musicplayer.mp3player.ringtone.designview.MarkerView;
 import com.music.musicplayer.mp3player.ringtone.designview.SeekTest;
 import com.music.musicplayer.mp3player.ringtone.designview.SongMetadataReader;
 import com.music.musicplayer.mp3player.ringtone.designview.WaveformView;
-import com.music.musicplayer.mp3player.ringtone.utils.AdsUtils;
 import com.music.musicplayer.mp3player.ringtone.utils.MyUtils;
 
 import java.io.ByteArrayOutputStream;
@@ -435,8 +435,8 @@ public class Music_Edit_Activity extends Activity implements MarkerView.MarkerLi
 
     private void loadGui() {
         setContentView(R.layout.activity_music__edit_);
-        AdsUtils.initAd(this);
-        AdsUtils.loadLargeBannerAd(this,findViewById(R.id.adsView));
+//        AdsUtils.initAd(this);
+//        AdsUtils.loadLargeBannerAd(this,findViewById(R.id.adsView));
         w = getResources().getDisplayMetrics().widthPixels;
         h = getResources().getDisplayMetrics().heightPixels;
         DisplayMetrics displayMetrics = new DisplayMetrics();
@@ -536,6 +536,12 @@ public class Music_Edit_Activity extends Activity implements MarkerView.MarkerLi
                 System.out.println("Seek test done, creating media player.");
                 try {
                     MediaPlayer mediaPlayer = new MediaPlayer();
+                    mediaPlayer.setAudioAttributes(
+                            new AudioAttributes.Builder()
+                                    .setContentType(AudioAttributes.CONTENT_TYPE_MUSIC)
+                                    .setUsage(AudioAttributes.USAGE_MEDIA)
+                                    .build()
+                    );
                     mediaPlayer.setDataSource(mFile.getAbsolutePath());
                     mediaPlayer.setAudioStreamType(3);
                     mediaPlayer.prepare();

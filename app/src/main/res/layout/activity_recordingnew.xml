@@ -266,21 +266,21 @@
 
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_gravity="bottom"
-        android:layout_weight="1.8">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="horizontal"
-            android:layout_alignParentBottom="true"
-            android:layout_gravity="bottom"
-            android:layout_marginTop="15dp"
-            android:id="@+id/adsView"/>
-    </LinearLayout>
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:layout_gravity="bottom"-->
+<!--        android:layout_weight="1.8">-->
+<!--&lt;!&ndash;        <LinearLayout&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:gravity="center"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:orientation="horizontal"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_alignParentBottom="true"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_gravity="bottom"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_marginTop="15dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:id="@+id/adsView"/>&ndash;&gt;-->
+<!--    </LinearLayout>-->
 
 
 

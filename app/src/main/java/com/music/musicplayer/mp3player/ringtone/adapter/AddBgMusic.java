@@ -1,6 +1,7 @@
 package com.music.musicplayer.mp3player.ringtone.adapter;
 
 import android.content.Context;
+import android.media.AudioAttributes;
 import android.media.MediaPlayer;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -141,6 +142,12 @@ public class AddBgMusic extends RecyclerView.Adapter<AddBgMusic.Holder> {
                 mediaPlayer.release();
             }
             mediaPlayer = new MediaPlayer();
+            mediaPlayer.setAudioAttributes(
+                    new AudioAttributes.Builder()
+                            .setContentType(AudioAttributes.CONTENT_TYPE_MUSIC)
+                            .setUsage(AudioAttributes.USAGE_MEDIA)
+                            .build()
+            );
             try {
                 mediaPlayer.setDataSource(str);
                 mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {

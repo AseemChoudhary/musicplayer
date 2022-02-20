@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorAccent">#a9a9aa</color>
-    <color name="colorPrimary">#3f51b5</color>
-    <color name="colorPrimaryDark">#303f9f</color>
+    <color name="colorPrimary">#1d2943</color>
+    <color name="colorPrimaryDark">#1b2231</color>
     <color name="ExitGrayAlpha">#d0000000</color>
     <color name="timecode">#ddffffdd</color>
     <color name="timecode_shadow">#aa000000</color>
@@ -18,11 +18,11 @@
     <color name="lightColor">#1b1d33</color>
     <color name="appBgColor">#171829</color>
     <color name="seek_bg">#42415a</color>
-    <color name="grid_line">#f5514a</color>
-    <color name="appPink">#FFF6357A</color>
-    <color name="waveSelected">#fa5b6e</color>
+    <color name="grid_line">#009d34</color>
+    <color name="appPink">#009e35</color>
+    <color name="waveSelected">#009d34</color>
     <color name="waveUnselected">#963842</color>
-    <color name="app_color">#fa586f</color>
+    <color name="app_color">#009d34</color>
     <color name="textgray">#727375</color>
     <color name="windowBackground">#ffffff</color>
     <color name="windowBackgroundDark">#2c2c2e</color>
@@ -37,9 +37,9 @@
     <color name="rippelColor">#0099cc</color>
     <color name="ripple_material_dark">#33ffffff</color>
     <color name="ripple_material_light">#1f000000</color>
-    <color name="playpause">#fffd5d5c</color>
+    <color name="playpause">#009d34</color>
     <color name="textColorPrimary">#FFFFFF</color>
-    <color name="colorAccentDark">#1d6293</color>
+    <color name="colorAccentDark">#1d2943</color>
     <color name="colorTabUnderline">#e0347f</color>
     <color name="colorTabUnderlineDark">@color/colorAccentDark</color>
     <color name="colorStationSwipeBackground">#ff4081</color>
@@ -108,5 +108,6 @@
     <color name="shimmer_color">#444</color>
     <color name="tab_indicator_color">#eb7786</color>
     <color name="yellow">#f3e840</color>
-
+    <color name="splash_background">#1d2943</color>
+    <color name="darkbackgroundicon">#009d34</color>
 </resources>

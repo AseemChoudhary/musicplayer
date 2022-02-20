@@ -9,8 +9,7 @@
     <RelativeLayout
         android:id="@+id/contact_list_relative_layout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginBottom="@dimen/_60sdp">
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:id="@+id/lin"
@@ -75,13 +74,13 @@
             android:layout_marginTop="@dimen/_5sdp" />
     </RelativeLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:id="@+id/adsview"
-        android:gravity="center_horizontal"
-        android:orientation="horizontal"
-        android:layout_alignParentBottom="true"
-        android:layout_gravity="center_horizontal"
-        android:layout_height="wrap_content">
-    </LinearLayout>
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:id="@+id/adsview"-->
+<!--        android:gravity="center_horizontal"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_gravity="center_horizontal"-->
+<!--        android:layout_height="wrap_content">-->
+<!--    </LinearLayout>-->
 </RelativeLayout>

@@ -7,6 +7,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.media.AudioAttributes;
 import android.media.AudioRecord;
 import android.media.MediaPlayer;
 import android.net.Uri;
@@ -30,7 +31,6 @@ import com.music.musicplayer.mp3player.R;
 import com.music.musicplayer.mp3player.musicplayer.PlayerActivity;
 import com.music.musicplayer.mp3player.radio.service.PauseReason;
 import com.music.musicplayer.mp3player.radio.service.PlayerServiceUtil;
-import com.music.musicplayer.mp3player.ringtone.utils.AdsUtils;
 import com.music.musicplayer.mp3player.ringtone.utils.MyUtils;
 import com.music.musicplayer.mp3player.voice_change.constants.IVoiceChangerConstants;
 import com.music.musicplayer.mp3player.voice_change.utils.DBLog;
@@ -76,8 +76,8 @@ public class RecordActivity extends DBFragmentActivity implements View.OnClickLi
         super.onCreate(bundle);
         setContentView((int) R.layout.activity_recordingnew);
         verifyPermissions();
-        AdsUtils.initAd(this);
-        AdsUtils.loadLargeBannerAd(this,findViewById(R.id.adsView));
+//        AdsUtils.initAd(this);
+//        AdsUtils.loadLargeBannerAd(this,findViewById(R.id.adsView));
         mTvInfoRecord = (TextView) findViewById(R.id.tv_record);
         mTvInfoRecord1 = (TextView) findViewById(R.id.tv_record1);
         recordingView = (LottieAnimationView) findViewById(R.id.recordingView);
@@ -447,6 +447,12 @@ public class RecordActivity extends DBFragmentActivity implements View.OnClickLi
             if (mPlayer == null) {
                 try {
                     mPlayer = new MediaPlayer();
+                    mPlayer.setAudioAttributes(
+                            new AudioAttributes.Builder()
+                                    .setContentType(AudioAttributes.CONTENT_TYPE_MUSIC)
+                                    .setUsage(AudioAttributes.USAGE_MEDIA)
+                                    .build()
+                    );
                     mPlayer.setDataSource(mFileName);
                     mPlayer.prepare();
                     mPlayer.start();

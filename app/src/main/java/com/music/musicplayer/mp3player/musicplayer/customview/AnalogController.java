@@ -63,13 +63,13 @@ public class AnalogController extends View {
         textPaint.setFakeBoldText(true);
         textPaint.setTextAlign(Paint.Align.CENTER);
         circlePaint = new Paint();
-        circlePaint.setColor(Color.parseColor("#f52b7e"));
+        circlePaint.setColor(Color.parseColor("#009c33"));
         circlePaint.setStyle(Paint.Style.FILL);
         circlePaint2 = new Paint();
-        circlePaint2.setColor(Color.parseColor("#f52b7e"));
+        circlePaint2.setColor(Color.parseColor("#009c33"));
         circlePaint2.setStyle(Paint.Style.FILL);
         linePaint = new Paint();
-        linePaint.setColor(Color.parseColor("#f52b7e"));
+        linePaint.setColor(Color.parseColor("#009c33"));
         linePaint.setStrokeWidth(MainActivity.ratio * 7.0f);
         angle = "0.0";
         label = "Label";

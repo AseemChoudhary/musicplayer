@@ -159,8 +159,8 @@
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="3dp"
                 android:layout_marginRight="3dp"
-                android:layout_toStartOf="@+id/totalTime"
                 android:layout_toEndOf="@+id/currTime"
+                android:layout_toStartOf="@+id/totalTime"
                 android:progressTint="@color/app_color"
                 android:thumb="@drawable/thumb" />
 

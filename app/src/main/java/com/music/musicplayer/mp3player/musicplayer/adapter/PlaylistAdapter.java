@@ -19,7 +19,6 @@ import com.music.musicplayer.mp3player.musicplayer.ViewPLaylistSongsActivity;
 import com.music.musicplayer.mp3player.musicplayer.interfaces.OnRefreshViewListner;
 import com.music.musicplayer.mp3player.musicplayer.model.PlaylistModel;
 import com.music.musicplayer.mp3player.R;
-import com.music.musicplayer.mp3player.ringtone.utils.AdsUtils;
 
 public class PlaylistAdapter extends RecyclerView.Adapter<PlaylistAdapter.ViewHolder> {
     Context ctx;
@@ -44,10 +43,10 @@ public class PlaylistAdapter extends RecyclerView.Adapter<PlaylistAdapter.ViewHo
         viewHolder.playListName.setText(playlistModel.getPlaylistName());
         viewHolder.itemView.setOnClickListener(view -> {
             MainActivity.tempPlaylist = MainActivity.allPlaylists.getPlaylists().get(i);
-            AdsUtils.initAd(ctx);
-            AdsUtils.loadInterAd(ctx);
-            AdsUtils.showInterAd(ctx,new Intent(ctx, ViewPLaylistSongsActivity.class));
-           // ctx.startActivity(new Intent(ctx, ViewPLaylistSongsActivity.class));
+//            AdsUtils.initAd(ctx);
+//            AdsUtils.loadInterAd(ctx);
+//            AdsUtils.showInterAd(ctx,new Intent(ctx, ViewPLaylistSongsActivity.class));
+           ctx.startActivity(new Intent(ctx, ViewPLaylistSongsActivity.class));
         });
         viewHolder.btnMore.setOnClickListener(view -> {
             MainActivity.allPlaylists.getPlaylists().remove(i);

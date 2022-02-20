@@ -6,8 +6,8 @@
         jcenter() // Warning: this repository is going to shut down soon
     }
 }*/
-rootProject.name = "All In One Audio"
+rootProject.name = "MusicPlayer"
 include ':app'
 include ':chart'
 include ':easysignseekbar'
-include ':bass'
+//include ':bass'

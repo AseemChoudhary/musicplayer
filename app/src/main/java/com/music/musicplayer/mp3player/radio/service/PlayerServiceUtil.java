@@ -85,7 +85,7 @@ public class PlayerServiceUtil {
         }
     }
 
-    private static IPlayerService itsPlayerService;
+private static IPlayerService itsPlayerService;
 
     private static ServiceConnection getServiceConnection() {
         return new ServiceConnection() {

@@ -19,7 +19,6 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import com.music.musicplayer.mp3player.R;
-import com.music.musicplayer.mp3player.ringtone.utils.AdsUtils;
 
 
 import java.io.File;
@@ -53,8 +52,8 @@ public class RingToneMainActivity extends AppCompatActivity {
         create_ringtone = findViewById(R.id.create_ringtone);
         back = findViewById(R.id.back);
         checkPermissions();
-        AdsUtils.initAd(this);
-        AdsUtils.loadLargeBannerAd(this,findViewById(R.id.adsView));
+//        AdsUtils.initAd(this);
+//        AdsUtils.loadLargeBannerAd(this,findViewById(R.id.adsView));
         ui();
 
         back.setOnClickListener(new View.OnClickListener() {

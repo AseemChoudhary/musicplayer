@@ -19,7 +19,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.music.musicplayer.mp3player.R;
 import com.music.musicplayer.mp3player.ringtone.adapter.MyNameRingtoneListAdapter;
 import com.music.musicplayer.mp3player.ringtone.model.SongList;
-import com.music.musicplayer.mp3player.ringtone.utils.AdsUtils;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -43,8 +42,8 @@ public class MyNameRingtoneListActivity extends AppCompatActivity {
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
         setContentView((int) R.layout.activity_my_name_ringtone_list);
-        AdsUtils.initAd(this);
-        AdsUtils.loadLargeBannerAd(this,findViewById(R.id.adsView));
+//        AdsUtils.initAd(this);
+//        AdsUtils.loadLargeBannerAd(this,findViewById(R.id.adsView));
         Intent intent = getIntent();
         path = intent.getStringExtra("ListPath");
         name = intent.getStringExtra("name");

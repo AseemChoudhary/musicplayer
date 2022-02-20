@@ -4,8 +4,8 @@ import android.content.Context;
 import android.os.AsyncTask;
 import android.util.Log;
 
-import com.arthenica.mobileffmpeg.Config;
-import com.arthenica.mobileffmpeg.FFmpeg;
+//import com.arthenica.mobileffmpeg.Config;
+//import com.arthenica.mobileffmpeg.FFmpeg;
 
 import java.io.File;
 
@@ -64,20 +64,20 @@ public class AsyncEcho extends AsyncTask<Void, Void, Void> {
 
 
     public void runFfmpegCmd(String[] strArr, AsyncMp3Overlay.FfmpegEventListener ffmpegEventListener) {
-        try {
-            int execute = FFmpeg.execute(strArr);
-            if (execute == 0) {
-                ffmpegEventListener.onSucces("success");
-                Log.i(Config.TAG, "Async command execution completed successfully.");
-            } else if (execute == 255) {
-                ffmpegEventListener.onCancel();
-                Log.i(Config.TAG, "Async command execution cancelled by user.");
-            } else {
-                ffmpegEventListener.onFailure("Fail to load.");
-                Log.i(Config.TAG, String.format("Async command execution failed with returnCode=%d.", new Object[]{Integer.valueOf(execute)}));
-            }
-        } catch (Exception exception) {
-            exception.printStackTrace();
-        }
+//        try {
+//            int execute = FFmpeg.execute(strArr);
+//            if (execute == 0) {
+//                ffmpegEventListener.onSucces("success");
+//                Log.i(Config.TAG, "Async command execution completed successfully.");
+//            } else if (execute == 255) {
+//                ffmpegEventListener.onCancel();
+//                Log.i(Config.TAG, "Async command execution cancelled by user.");
+//            } else {
+//                ffmpegEventListener.onFailure("Fail to load.");
+//                Log.i(Config.TAG, String.format("Async command execution failed with returnCode=%d.", new Object[]{Integer.valueOf(execute)}));
+//            }
+//        } catch (Exception exception) {
+//            exception.printStackTrace();
+//        }
     }
 }

@@ -8,6 +8,7 @@ import android.content.ContentValues;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
+import android.media.AudioAttributes;
 import android.media.MediaPlayer;
 import android.media.RingtoneManager;
 import android.net.Uri;
@@ -33,8 +34,6 @@ import com.music.musicplayer.mp3player.musicplayer.PlayerActivity;
 import com.music.musicplayer.mp3player.radio.service.PauseReason;
 import com.music.musicplayer.mp3player.radio.service.PlayerServiceUtil;
 import com.music.musicplayer.mp3player.ringtone.model.SongList;
-
-import com.music.musicplayer.mp3player.ringtone.utils.AdsUtils;
 import com.music.musicplayer.mp3player.ringtone.utils.TimeUtils;
 
 import java.io.BufferedInputStream;
@@ -78,14 +77,20 @@ public class PlayRingtoneActivity extends AppCompatActivity {
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
         setContentView((int) R.layout.activity_play_ringtone);
-        AdsUtils.initAd(this);
-        AdsUtils.loadLargeBannerAd(this,findViewById(R.id.adsView));
+//        AdsUtils.initAd(this);
+//        AdsUtils.loadLargeBannerAd(this,findViewById(R.id.adsView));
         ui();
 
     }
 
     private void ui() {
         mp = new MediaPlayer();
+        mp.setAudioAttributes(
+                new AudioAttributes.Builder()
+                        .setContentType(AudioAttributes.CONTENT_TYPE_MUSIC)
+                        .setUsage(AudioAttributes.USAGE_MEDIA)
+                        .build()
+        );
         Intent intent = getIntent();
         songPath = intent.getStringExtra("Song Path");
         songPosition = intent.getIntExtra("Song Position", 0);

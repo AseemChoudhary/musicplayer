@@ -7,6 +7,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
+import android.media.AudioAttributes;
 import android.media.MediaPlayer;
 import android.media.RingtoneManager;
 import android.net.Uri;
@@ -554,6 +555,12 @@ public class SongEditActivity extends Activity implements MarkerView.MarkerListe
                 System.out.println("Seek test done, creating media player.");
                 try {
                     MediaPlayer mediaPlayer = new MediaPlayer();
+                    mediaPlayer.setAudioAttributes(
+                            new AudioAttributes.Builder()
+                                    .setContentType(AudioAttributes.CONTENT_TYPE_MUSIC)
+                                    .setUsage(AudioAttributes.USAGE_MEDIA)
+                                    .build()
+                    );
                     mediaPlayer.setDataSource(mFile.getAbsolutePath());
                     mediaPlayer.setAudioStreamType(3);
                     mediaPlayer.prepare();

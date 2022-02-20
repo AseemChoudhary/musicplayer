@@ -1,6 +1,7 @@
 package com.music.musicplayer.mp3player.radio.players.mediaplayer;
 
 import android.content.Context;
+import android.media.AudioAttributes;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Handler;
@@ -80,6 +81,12 @@ public class MediaPlayerWrapper implements PlayerWrapper, StreamProxyListener {
 
         if (mediaPlayer == null) {
             mediaPlayer = new MediaPlayer();
+            mediaPlayer.setAudioAttributes(
+                    new AudioAttributes.Builder()
+                            .setContentType(AudioAttributes.CONTENT_TYPE_MUSIC)
+                            .setUsage(AudioAttributes.USAGE_MEDIA)
+                            .build()
+            );
         }
 
         if (mediaPlayer.isPlaying()) {

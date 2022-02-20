@@ -8,8 +8,8 @@
         android:startX="-31.65"
         android:startY="495.91"
         android:type="linear"
-        android:startColor="#FF961879"
-        android:centerColor="#FFEA00AD"
-        android:endColor="#FF961879                   "
+        android:startColor="#009e35"
+        android:centerColor="#00f28b"
+        android:endColor="#009e35                   "
         />
 </shape>

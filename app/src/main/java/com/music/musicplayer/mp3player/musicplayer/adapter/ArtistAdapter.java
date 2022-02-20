@@ -16,7 +16,6 @@ import com.music.musicplayer.mp3player.MainActivity;
 import com.music.musicplayer.mp3player.musicplayer.ViewArtistSongsActivity;
 import com.music.musicplayer.mp3player.musicplayer.model.ArtistModel;
 import com.music.musicplayer.mp3player.R;
-import com.music.musicplayer.mp3player.ringtone.utils.AdsUtils;
 
 public class ArtistAdapter extends RecyclerView.Adapter<ArtistAdapter.ViewHolder> {
     List<ArtistModel> artistList;
@@ -46,10 +45,10 @@ public class ArtistAdapter extends RecyclerView.Adapter<ArtistAdapter.ViewHolder
             @Override
             public void onClick(View view) {
                 MainActivity.tempArtist = MainActivity.finalArtists.get(i);
-                AdsUtils.loadInterAd(ctx);
-                AdsUtils.loadInterAd(ctx);
-                AdsUtils.showInterAd(ctx,new Intent(ctx, ViewArtistSongsActivity.class));
-                //ctx.startActivity(new Intent(ctx, ViewArtistSongsActivity.class));
+//                AdsUtils.loadInterAd(ctx);
+//                AdsUtils.loadInterAd(ctx);
+//                AdsUtils.showInterAd(ctx,new Intent(ctx, ViewArtistSongsActivity.class));
+                ctx.startActivity(new Intent(ctx, ViewArtistSongsActivity.class));
             }
         });
     }

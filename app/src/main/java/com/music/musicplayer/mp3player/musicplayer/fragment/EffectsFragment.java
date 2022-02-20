@@ -31,11 +31,11 @@ public class EffectsFragment extends Fragment {
         reverbController = (AnalogController) view.findViewById(R.id.controller3D);
         bassController.setLabel("");
         reverbController.setLabel("");
-        bassController.circlePaint2.setColor(Color.parseColor("#f52b7e"));
-        bassController.linePaint.setColor(Color.parseColor("#f52b7e"));
+        bassController.circlePaint2.setColor(Color.parseColor("#009c33"));
+        bassController.linePaint.setColor(Color.parseColor("#009c33"));
         bassController.invalidate();
-        reverbController.circlePaint2.setColor(Color.parseColor("#f52b7e"));
-        bassController.linePaint.setColor(Color.parseColor("#f52b7e"));
+        reverbController.circlePaint2.setColor(Color.parseColor("#009c33"));
+        bassController.linePaint.setColor(Color.parseColor("#009c33"));
         reverbController.invalidate();
         if (!MainActivity.isEqualizerReloaded) {
             int i = 0;

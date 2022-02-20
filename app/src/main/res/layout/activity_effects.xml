@@ -82,7 +82,7 @@
                 android:layout_height="45dp"
                 android:layout_gravity="center_horizontal"
                 android:id="@+id/downloadBtn"
-                android:layout_marginBottom="20dp"
+                android:layout_marginBottom="10dp"
                 android:background="@drawable/down_bg"
                 android:gravity="center">
 
@@ -96,14 +96,14 @@
 
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:id="@+id/adsview"
-                android:gravity="center_horizontal"
-                android:orientation="horizontal"
-                android:layout_gravity="center_horizontal"
-                android:layout_height="wrap_content">
-            </LinearLayout>
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:id="@+id/adsview"-->
+<!--                android:gravity="center_horizontal"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:layout_gravity="center_horizontal"-->
+<!--                android:layout_height="wrap_content">-->
+<!--            </LinearLayout>-->
 
         </LinearLayout>
 

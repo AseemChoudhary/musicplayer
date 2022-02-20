@@ -289,15 +289,15 @@
                 </LinearLayout>
             </RelativeLayout>
         </RelativeLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:id="@+id/adsview"
-            android:gravity="center_horizontal"
-            android:orientation="horizontal"
-            android:layout_alignParentBottom="true"
-            android:layout_gravity="center_horizontal"
-            android:layout_height="wrap_content">
-        </LinearLayout>
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:id="@+id/adsview"-->
+<!--            android:gravity="center_horizontal"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:layout_alignParentBottom="true"-->
+<!--            android:layout_gravity="center_horizontal"-->
+<!--            android:layout_height="wrap_content">-->
+<!--        </LinearLayout>-->
     </LinearLayout>
 
 

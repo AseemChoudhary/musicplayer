@@ -12,7 +12,6 @@ import android.view.View;
 import android.widget.LinearLayout;
 
 import com.music.musicplayer.mp3player.ringtone.MyNameRingtoneListActivity;
-import com.music.musicplayer.mp3player.ringtone.utils.AdsUtils;
 import com.music.musicplayer.mp3player.R;
 
 public class MainCreationActivity extends AppCompatActivity  {
@@ -24,8 +23,8 @@ public class MainCreationActivity extends AppCompatActivity  {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_creation);
-        AdsUtils.initAd(this);
-        AdsUtils.loadLargeBannerAd(this,findViewById(R.id.adsView));
+//        AdsUtils.initAd(this);
+//        AdsUtils.loadLargeBannerAd(this,findViewById(R.id.adsView));
         btnNameRingList=findViewById(R.id.btnNameRingList);
         btnCutAudioList=findViewById(R.id.btnCutAudioList);
         btnVoiceRecorderList=findViewById(R.id.btnVoiceRecorderList);

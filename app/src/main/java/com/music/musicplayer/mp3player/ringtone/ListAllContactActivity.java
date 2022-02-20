@@ -23,7 +23,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.music.musicplayer.mp3player.R;
 import com.music.musicplayer.mp3player.ringtone.adapter.ListAllContactAdapter;
 import com.music.musicplayer.mp3player.ringtone.model.ContactList;
-import com.music.musicplayer.mp3player.ringtone.utils.AdsUtils;
 
 
 import java.util.ArrayList;
@@ -53,8 +52,8 @@ public class ListAllContactActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_list_all_contact);
         back=findViewById(R.id.back);
-        AdsUtils.initAd(this);
-        AdsUtils.loadLargeBannerAd(this,findViewById(R.id.adsView));
+//        AdsUtils.initAd(this);
+//        AdsUtils.loadLargeBannerAd(this,findViewById(R.id.adsView));
         context = getApplicationContext();
         Intent intent = getIntent();
         songPosition = intent.getIntExtra("song position", 0);

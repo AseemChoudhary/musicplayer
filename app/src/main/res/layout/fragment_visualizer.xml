@@ -33,8 +33,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:src="@drawable/wave_img"
-
-            />
+            app:tint="@color/darkbackgroundicon" />
         <androidx.cardview.widget.CardView
             app:cardElevation = "16dp"
             app:cardCornerRadius = "160dp"

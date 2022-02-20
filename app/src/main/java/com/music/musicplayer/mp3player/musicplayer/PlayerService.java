@@ -7,6 +7,7 @@ import android.app.PendingIntent;
 import android.app.Service;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.media.AudioAttributes;
 import android.media.MediaPlayer;
 import android.os.Build;
 import android.os.CountDownTimer;
@@ -39,8 +40,15 @@ public class PlayerService extends Service {
     public void onCreate() {
         if (PlayerActivity.mMediaPlayer == null) {
             PlayerActivity.mMediaPlayer = new MediaPlayer();
+            PlayerActivity.mMediaPlayer.setAudioAttributes(
+                    new AudioAttributes.Builder()
+                            .setContentType(AudioAttributes.CONTENT_TYPE_MUSIC)
+                            .setUsage(AudioAttributes.USAGE_MEDIA)
+                            .build()
+            );
         }
         notificationView = new RemoteViews(getPackageName(), R.layout.status_bar);
+        showNotification();
         super.onCreate();
     }
 
@@ -49,6 +57,12 @@ public class PlayerService extends Service {
         Log.e(TAG, "onStartCommand: ");
         if (PlayerActivity.mMediaPlayer == null) {
             PlayerActivity.mMediaPlayer = new MediaPlayer();
+            PlayerActivity.mMediaPlayer.setAudioAttributes(
+                    new AudioAttributes.Builder()
+                            .setContentType(AudioAttributes.CONTENT_TYPE_MUSIC)
+                            .setUsage(AudioAttributes.USAGE_MEDIA)
+                            .build()
+            );
         }
         try {
 
@@ -95,7 +109,9 @@ public class PlayerService extends Service {
                         PlayerActivity.controller.setImageResource(R.drawable.pause);
                     }
                     HomeActivity.btnPlayPause.setImageResource(R.drawable.pause);
-                    showNotification();
+                    notificationView.setImageViewResource(R.id.status_bar_play, R.drawable.pause);
+                    startForeground(101,notification);
+                   // showNotification();
                 }
 
             } else if (intent.getAction().equals(Constants.ACTION.STOPFOREGROUND_ACTION)) {
@@ -147,11 +163,14 @@ public class PlayerService extends Service {
         notificationView.setOnClickPendingIntent(R.id.status_bar_previous, service3);
         notificationView.setOnClickPendingIntent(R.id.status_bar_next, service4);
         if (Build.VERSION.SDK_INT >= 26) {
-            NotificationChannel notificationChannel = new NotificationChannel("Channel123", "Channel", NotificationManager.IMPORTANCE_NONE);
+            NotificationChannel notificationChannel = new NotificationChannel("musicapp24", "MusicApp", NotificationManager.IMPORTANCE_LOW);
             notificationChannel.setLightColor(-16776961);
             notificationChannel.setLockscreenVisibility(0);
             ((NotificationManager) getSystemService(NOTIFICATION_SERVICE)).createNotificationChannel(notificationChannel);
-             notification = new NotificationCompat.Builder(this, "Channel123").setOngoing(true).setSmallIcon(R.mipmap.ic_launcher).setCustomBigContentView(this.notificationView).setContentIntent(activity).setContent(this.notificationView).setPriority(4).setCategory(NotificationCompat.CATEGORY_SERVICE).build();
+             notification = new NotificationCompat.Builder(this, "musicapp24").setOngoing(true)
+                     .setSmallIcon(R.mipmap.ic_launcher).setCustomBigContentView(this.notificationView)
+                     .setContentIntent(activity).setContent(this.notificationView)
+                     .setPriority(Notification.PRIORITY_DEFAULT).setCategory(NotificationCompat.CATEGORY_SERVICE).build();
              startForeground(101,notification);
             return;
         }
@@ -167,8 +186,11 @@ public class PlayerService extends Service {
     @Override
     public void onDestroy() {
         super.onDestroy();
-        Intent serviceIntent = new Intent(this, PlayerService.class);
-        startService(serviceIntent);
+        if(PlayerServiceUtil.isPlaying()){
+            Intent serviceIntent = new Intent(this, PlayerService.class);
+            startService(serviceIntent);
+        }
+        stopForeground(true);
     }
 
     @Override

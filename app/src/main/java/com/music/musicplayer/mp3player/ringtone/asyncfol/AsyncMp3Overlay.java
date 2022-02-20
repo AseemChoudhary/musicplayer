@@ -4,8 +4,8 @@ import android.content.Context;
 import android.os.AsyncTask;
 import android.util.Log;
 
-import com.arthenica.mobileffmpeg.Config;
-import com.arthenica.mobileffmpeg.FFmpeg;
+//import com.arthenica.mobileffmpeg.Config;
+//import com.arthenica.mobileffmpeg.FFmpeg;
 
 public class AsyncMp3Overlay extends AsyncTask<Void, Void, Void> {
     Context cn;
@@ -71,17 +71,17 @@ public class AsyncMp3Overlay extends AsyncTask<Void, Void, Void> {
 
     public static void runFfmpegCmd(String[] strArr, FfmpegEventListener ffmpegEventListener) {
         try {
-            int execute = FFmpeg.execute(strArr);
-            if (execute == 0) {
-                ffmpegEventListener.onSucces("success");
-                Log.i(Config.TAG, "Async command execution completed successfully.");
-            } else if (execute == 255) {
-                ffmpegEventListener.onCancel();
-                Log.i(Config.TAG, "Async command execution cancelled by user.");
-            } else {
-                ffmpegEventListener.onFailure("Fail to load.");
-                Log.i(Config.TAG, String.format("Async command execution failed with returnCode=%d.", new Object[]{Integer.valueOf(execute)}));
-            }
+//            int execute = FFmpeg.execute(strArr);
+//            if (execute == 0) {
+//                ffmpegEventListener.onSucces("success");
+//                Log.i(Config.TAG, "Async command execution completed successfully.");
+//            } else if (execute == 255) {
+//                ffmpegEventListener.onCancel();
+//                Log.i(Config.TAG, "Async command execution cancelled by user.");
+//            } else {
+//                ffmpegEventListener.onFailure("Fail to load.");
+//                Log.i(Config.TAG, String.format("Async command execution failed with returnCode=%d.", new Object[]{Integer.valueOf(execute)}));
+//            }
         } catch (Exception exception) {
             exception.printStackTrace();
         }

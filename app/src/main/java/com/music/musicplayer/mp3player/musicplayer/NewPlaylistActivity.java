@@ -30,7 +30,6 @@ import com.music.musicplayer.mp3player.musicplayer.model.LocalTrackModel;
 import com.music.musicplayer.mp3player.musicplayer.model.PlaylistModel;
 import com.music.musicplayer.mp3player.musicplayer.model.TrackModel;
 import com.music.musicplayer.mp3player.musicplayer.model.UnifiedTrackModel;
-import com.music.musicplayer.mp3player.ringtone.utils.AdsUtils;
 
 public class NewPlaylistActivity extends AppCompatActivity {
     static boolean isSavePLaylistsRunning = false;
@@ -45,8 +44,8 @@ public class NewPlaylistActivity extends AppCompatActivity {
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
         setContentView((int) R.layout.activity_new_playlist);
-        AdsUtils.initAd(this);
-        AdsUtils.loadLargeBannerAd(this,findViewById(R.id.adsView));
+//        AdsUtils.initAd(this);
+//        AdsUtils.loadLargeBannerAd(this,findViewById(R.id.adsView));
         recyclerview = (RecyclerView) findViewById(R.id.recyclerview);
         Done = (ImageView) findViewById(R.id.Done);
         back = (ImageView) findViewById(R.id.back);

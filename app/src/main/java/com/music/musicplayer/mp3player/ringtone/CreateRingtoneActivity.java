@@ -13,6 +13,7 @@ import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.media.AudioAttributes;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.media.MediaRecorder;
@@ -54,7 +55,6 @@ import com.music.musicplayer.mp3player.ringtone.asyncfol.AsyncMergeMp3;
 import com.music.musicplayer.mp3player.ringtone.asyncfol.AsyncMp3Overlay;
 import com.music.musicplayer.mp3player.ringtone.asyncfol.OnCommonProgress;
 import com.music.musicplayer.mp3player.ringtone.helper.SeekbarVC;
-import com.music.musicplayer.mp3player.ringtone.utils.AdsUtils;
 import com.music.musicplayer.mp3player.ringtone.utils.ContentUtill;
 
 import com.music.musicplayer.mp3player.ringtone.utils.MyStopWatch;
@@ -181,8 +181,8 @@ public class CreateRingtoneActivity extends Activity implements TextToSpeech.OnI
                 exception.printStackTrace();
             }
         }
-        AdsUtils.initAd(this);
-        AdsUtils.loadLargeBannerAd(this,findViewById(R.id.adsView));
+//        AdsUtils.initAd(this);
+//        AdsUtils.loadLargeBannerAd(this,findViewById(R.id.adsView));
         sharedPref = getSharedPreferences("Position", 0);
         languageSharedPref = getSharedPreferences("LanguagePosition", 0);
         languagePosition = languageSharedPref.getInt("languagePosition", 0);
@@ -405,16 +405,16 @@ public class CreateRingtoneActivity extends Activity implements TextToSpeech.OnI
                                     File file = new File(getFilesDir(), "audiotmp.mp3");
                                     Log.e("file path",file.getPath());
                                     if (file.exists()) {
-                                        new AsyncEcho(cn, file.getAbsolutePath(), new File(getFilesDir(), "audiooptmp.mp3").getAbsolutePath(), inGain, outGain, delay, decay, new OnCommonProgress() {
-                                            public void OnComplete(Boolean bool, Object obj) {
-                                                Log.e("AAA", "Echo Success : " + bool + " " + obj);
-                                                initmedia((String) obj, new OnMyMediaComplete() {
-                                                    public void OnComplete() {
-                                                        releaseMedia1();
-                                                    }
-                                                });
-                                            }
-                                        }).execute(new Void[0]);
+//                                        new AsyncEcho(cn, file.getAbsolutePath(), new File(getFilesDir(), "audiooptmp.mp3").getAbsolutePath(), inGain, outGain, delay, decay, new OnCommonProgress() {
+//                                            public void OnComplete(Boolean bool, Object obj) {
+//                                                Log.e("AAA", "Echo Success : " + bool + " " + obj);
+//                                                initmedia((String) obj, new OnMyMediaComplete() {
+//                                                    public void OnComplete() {
+//                                                        releaseMedia1();
+//                                                    }
+//                                                });
+//                                            }
+//                                        }).execute(new Void[0]);
                                         return;
                                     }
                                     return;
@@ -722,6 +722,12 @@ public class CreateRingtoneActivity extends Activity implements TextToSpeech.OnI
 
     public void initmedia(String str, final OnMyMediaComplete onMyMediaComplete2) {
         mediaPlayer = new MediaPlayer();
+        mediaPlayer.setAudioAttributes(
+                new AudioAttributes.Builder()
+                        .setContentType(AudioAttributes.CONTENT_TYPE_MUSIC)
+                        .setUsage(AudioAttributes.USAGE_MEDIA)
+                        .build()
+        );
         try {
             mediaPlayer.setDataSource(str);
             mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
@@ -748,6 +754,12 @@ public class CreateRingtoneActivity extends Activity implements TextToSpeech.OnI
     public void initMedia1(String str, final OnMyMediaComplete onMyMediaComplete2) {
         releaseMedia1();
         mediaPlayer1 = new MediaPlayer();
+        mediaPlayer1.setAudioAttributes(
+                new AudioAttributes.Builder()
+                        .setContentType(AudioAttributes.CONTENT_TYPE_MUSIC)
+                        .setUsage(AudioAttributes.USAGE_MEDIA)
+                        .build()
+        );
         try {
             mediaPlayer1.setDataSource(str);
             mediaPlayer1.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
@@ -1070,13 +1082,13 @@ public class CreateRingtoneActivity extends Activity implements TextToSpeech.OnI
                     if (intCommon == 1) {
                         File file = new File(path5);
                         if (file.exists()) {
-                            new AsyncEcho(cn, file.getAbsolutePath(), new File(selBgMusic.length() > 0 ? new File(getFilesDir(), "audiooptmp.mp3").getAbsolutePath() : Save_RingTone.this.destinationFileName).getAbsolutePath(), inGain, outGain, delay, decay, new OnCommonProgress() {
-                                @Override
-                                public void OnComplete(Boolean bool, Object obj) {
-                                    path5 = (String) obj;
-                                    saveSynth(destinationFileName, pd, isShare);
-                                }
-                            }).execute(new Void[0]);
+//                            new AsyncEcho(cn, file.getAbsolutePath(), new File(selBgMusic.length() > 0 ? new File(getFilesDir(), "audiooptmp.mp3").getAbsolutePath() : Save_RingTone.this.destinationFileName).getAbsolutePath(), inGain, outGain, delay, decay, new OnCommonProgress() {
+//                                @Override
+//                                public void OnComplete(Boolean bool, Object obj) {
+//                                    path5 = (String) obj;
+//                                    saveSynth(destinationFileName, pd, isShare);
+//                                }
+//                            }).execute(new Void[0]);
                             return;
                         }
                         return;

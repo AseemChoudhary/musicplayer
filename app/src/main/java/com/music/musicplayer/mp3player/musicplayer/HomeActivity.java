@@ -25,7 +25,6 @@ import com.music.musicplayer.mp3player.musicplayer.fragment.FragmentArtist;
 import com.music.musicplayer.mp3player.musicplayer.fragment.FragmentFolder;
 import com.music.musicplayer.mp3player.musicplayer.fragment.FragmentPlaylist;
 import com.music.musicplayer.mp3player.musicplayer.fragment.FragmentSongs;
-import com.music.musicplayer.mp3player.ringtone.utils.AdsUtils;
 
 public class HomeActivity extends AppCompatActivity {
     public static ImageView btnNext;
@@ -57,8 +56,8 @@ public class HomeActivity extends AppCompatActivity {
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
         setContentView((int) R.layout.activity_home);
-        AdsUtils.initAd(this);
-        AdsUtils.loadLargeBannerAd(this,findViewById(R.id.adsview));
+//        AdsUtils.initAd(this);
+//        AdsUtils.loadLargeBannerAd(this,findViewById(R.id.adsview));
         init();
         clicks();
         addTabsToViewpager(viewpager);
@@ -78,9 +77,9 @@ public class HomeActivity extends AppCompatActivity {
         timer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                AdsUtils.initAd(HomeActivity.this);
-                AdsUtils.showInterAd(HomeActivity.this,new Intent(HomeActivity.this, TimerActivity.class));
-              //  startActivity(new Intent(HomeActivity.this, TimerActivity.class));
+//                AdsUtils.initAd(HomeActivity.this);
+//                AdsUtils.showInterAd(HomeActivity.this,new Intent(HomeActivity.this, TimerActivity.class));
+               startActivity(new Intent(HomeActivity.this, TimerActivity.class));
             }
         });
         btnAlbum.setOnClickListener(new View.OnClickListener() {

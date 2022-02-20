@@ -1,6 +1,7 @@
 package com.music.musicplayer.mp3player.ringtone.designview;
 
 import android.content.SharedPreferences;
+import android.media.AudioAttributes;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.util.Log;
@@ -74,6 +75,12 @@ public class SeekTest {
         try {
             Log.i("Ringdroid", "File written, starting to play");
             MediaPlayer player = new MediaPlayer();
+            player.setAudioAttributes(
+                    new AudioAttributes.Builder()
+                            .setContentType(AudioAttributes.CONTENT_TYPE_MUSIC)
+                            .setUsage(AudioAttributes.USAGE_MEDIA)
+                            .build()
+            );
             player.setAudioStreamType(AudioManager.STREAM_MUSIC);
             FileInputStream subsetInputStream = new FileInputStream(filename);
             long start = 70 * SILENCE_MP3_FRAME.length;
